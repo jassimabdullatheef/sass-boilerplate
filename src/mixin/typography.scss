@@ -1,0 +1,139 @@
+@import '../variables';
+@import './media';
+
+// Typography Mixins
+@mixin typography($type: null) {
+  @if $type == 'h1' {
+    font-size: $font-size-x-large;
+    font-weight: $text-medium;
+    line-height: 1.1em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-xx-large;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-xxx-large;
+    }
+  } @else if $type == 'h2' {
+    font-size: $font-size-large;
+    font-weight: $text-medium;
+    line-height: 1.2em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-x-large;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-xx-large;
+    }
+  } @else if $type == 'h3' {
+    font-size: $font-size-normal;
+    font-weight: $text-medium;
+    line-height: 1.3em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-large;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-x-large;
+    }
+  } @else if $type == 'h4' {
+    font-size: $font-size-small;
+    font-weight: $text-medium;
+    line-height: 1.4em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-normal;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-large;
+    }
+  } @else if $type == 'h5' {
+    font-size: $font-size-x-small;
+    font-weight: $text-medium;
+    line-height: 1.5em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-small;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-normal;
+    }
+  } @else if $type == 'h6' {
+    font-size: $font-size-xx-small;
+    font-weight: $text-medium;
+    line-height: 1.6em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-x-small;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-small;
+    }
+  } @else if $type == 'title' {
+    font-size: $font-size-xxx-large;
+    font-weight: $text-medium;
+    line-height: 1em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-xxxx-large;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-xxxxx-large;
+    }
+  } @else if $type == 'subtitle' {
+    font-size: $font-size-xx-large;
+    font-weight: $text-normal;
+    line-height: 1.1em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-xxx-large;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-xxxx-large;
+    }
+  } @else if $type == 'small' {
+    font-size: $font-size-x-small;
+    font-weight: $text-normal;
+    line-height: 1em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-small;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-normal;
+    }
+  } @else if $type == 'xSmall' {
+    font-size: $font-size-xx-small;
+    font-weight: $text-normal;
+    line-height: 1em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-x-small;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-small;
+    }
+  } @else {
+    font-size: $font-size-small;
+    font-weight: $text-normal;
+    line-height: 1.4em;
+
+    @include media($medium-breakpoint) {
+      font-size: $font-size-normal;
+    }
+
+    @include media($xxx-large-breakpoint) {
+      font-size: $font-size-large;
+    }
+  }
+}

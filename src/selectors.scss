@@ -1,0 +1,27 @@
+$text-box-selectors: '
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="week"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="search"],
+    input[type="tel"],
+    input[type= "time"],
+    input[type= "url"]
+';
+
+$select-selectors: '
+    select,
+    .input--select
+';
+
+$button-selectors: '
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    .button
+';

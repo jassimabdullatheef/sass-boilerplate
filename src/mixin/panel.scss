@@ -1,0 +1,6 @@
+@mixin panel($type: null) {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  position: relative;
+  width: 100%;
+}

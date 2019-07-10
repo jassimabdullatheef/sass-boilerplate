@@ -1,0 +1,11 @@
+@mixin media($device, $width-type: null) {
+  @if $width-type == null {
+    @media (min-width: $device) {
+      @content;
+    }
+  } @else {
+    @media screen and (#{$width-type}: $device) {
+      @content;
+    }
+  }
+}

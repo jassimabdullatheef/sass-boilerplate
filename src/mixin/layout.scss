@@ -1,0 +1,62 @@
+@import '../variables';
+@import './media';
+
+@mixin gap($type, $size) {
+  .#{$type}-#{$size} {
+    #{$type}: $x-small * $size;
+  }
+}
+
+@mixin responsive-columns($size, $keyword) {
+  @include media($size) {
+    .column--#{$keyword}--fit {
+      flex: 1;
+    }
+
+    .column--#{$keyword}--full {
+      flex: none;
+      width: 100%;
+    }
+
+    .column--#{$keyword}--half {
+      flex: none;
+      width: 50%;
+    }
+
+    .column--#{$keyword}--three-quarter {
+      flex: none;
+      width: 75%;
+    }
+
+    .column--#{$keyword}--quarter {
+      flex: none;
+      width: 25%;
+    }
+
+    .column--#{$keyword}--one-third {
+      flex: none;
+      width: calc(100% / 3);
+    }
+
+    .column--#{$keyword}--two-third {
+      flex: none;
+      width: calc(100% - 100% / 3);
+    }
+  }
+}
+
+@mixin responsive-toggle($size, $keyword) {
+  @include media($size) {
+    .#{$keyword}--hide {
+      display: none;
+    }
+
+    .#{$keyword}--show {
+      display: block;
+
+      &.container {
+        display: flex;
+      }
+    }
+  }
+}
