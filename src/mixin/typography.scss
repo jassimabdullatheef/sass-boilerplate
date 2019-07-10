@@ -1,9 +1,7 @@
-@import '../variables';
-@import './media';
-
 // Typography Mixins
 @mixin typography($type: null) {
   @if $type == 'h1' {
+    font-size: $font-size-x-large;
     font-size: $font-size-x-large;
     font-weight: $text-medium;
     line-height: 1.1em;
